@@ -31,10 +31,10 @@ jobs:
       - name: Run Postman tests and export HTML report
   
         run: |
-          newman run tw.json \
+          newman run twcol.json \
           -e envtw.json \
-          --env-var "username=${{ secrets.POSTMAN_USER }}" \
-          --env-var "password=${{ secrets.POSTMAN_PASSWORD }}" \
+          --env-var "user_name=${{ secrets.POSTMAN_USER }}" \
+          --env-var "user_pass=${{ secrets.POSTMAN_PASSWORD }}" \
             --reporters cli,htmlextra \
             --reporter-htmlextra-export reports/results.html
 
